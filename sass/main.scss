@@ -1,4 +1,6 @@
 // Importing styles from modules
-@import 'modules/_vars';
-@import 'modules/header';
-@import 'modules/footer';
+@import 'modules/_vars.scss';
+@import 'modules/common-elements.scss';
+@import 'modules/header.scss';
+@import 'modules/footer.scss';
+@import 'modules/homepage.scss';

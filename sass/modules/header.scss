@@ -1,0 +1,72 @@
+// 
+// Styles for mobile version
+// 
+header{
+    width:100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top:5px;
+    z-index:30;
+}
+
+.header-container{
+    height:100px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header-left{
+    width:50%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    a{
+        width: 70px;
+
+        img{
+            width:100%;
+        }
+    }
+}
+
+.header-left-burger{
+    width:50px;
+
+    img{
+        width:100%;
+    }
+}
+
+.header-right{
+    width:40%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    position: relative;
+}
+
+.header-right-img{
+    position: absolute;
+    top:50%;
+    left:-30px;
+    transform: translateY(-50%);
+    width:260px;
+}
+
+.header-right-list{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width:100px;
+    z-index: 10;
+
+    img{
+        width:20px;
+    }
+}
