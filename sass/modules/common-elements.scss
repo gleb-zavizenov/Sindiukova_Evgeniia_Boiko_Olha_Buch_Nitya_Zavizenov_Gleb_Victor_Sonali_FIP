@@ -44,3 +44,35 @@ p{
     font-weight: 600;
     font-size:14px;
 }
+
+// 
+// Styles for the tablet version
+//
+@media screen and (min-width:720px){
+    .container{
+        width:720px;
+    }
+
+    h1{
+        font-size:44px;
+        line-height: 60px;
+    }
+
+    h2{
+        font-size: 38px;
+    }
+
+    p{
+        font-size: 16px;
+    }
+} 
+
+
+// 
+// Styles for the desktop version
+//
+@media screen and (min-width:1200px){
+    .container{
+        width:1200px;
+    }
+}
