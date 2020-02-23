@@ -42,6 +42,10 @@ header{
     }
 }
 
+.header-left-nav{
+    display: none;
+}
+
 .header-right{
     width:40%;
     display: flex;
@@ -69,4 +73,46 @@ header{
     img{
         width:20px;
     }
+}
+
+// 
+// Styles for the tablet version
+// 
+@media screen and (min-width:720px){
+    .header-left{
+        width:60%;
+    }
+
+    .header-left-burger{
+        display: none;
+    }
+
+    .header-left-nav{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        a{
+            text-decoration: none;
+            color: black;
+            font-family: 'Montserrat';
+            font-size:16px;
+            margin-right: 18px;
+        }
+    }
+
+    .header-right-list{
+        width:120px;
+    }
+
+    .header-right-img{
+        left:110px;
+    }
+}
+
+// 
+// Styles for desktop version
+// 
+@media screen and (min-width:1200px){
+    
 }
