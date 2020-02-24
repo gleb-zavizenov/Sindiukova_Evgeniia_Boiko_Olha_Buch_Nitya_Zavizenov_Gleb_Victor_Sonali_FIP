@@ -1,1 +1,17 @@
-header{width:100%;display:flex;align-items:center;justify-content:center;margin-top:5px;z-index:30}.header-container{height:100px;display:flex;flex-direction:row;align-items:center;justify-content:space-between}.header-left{width:50%;display:flex;flex-direction:row;align-items:center;justify-content:space-between}.header-left a{width:70px}.header-left a img{width:100%}.header-left-burger{width:50px}.header-left-burger img{width:100%}.header-left-nav{display:none}.header-right{width:40%;display:flex;align-items:center;justify-content:flex-end;position:relative}.header-right-img{position:absolute;top:50%;left:-30px;transform:translateY(-50%);width:260px}.header-right-list{display:flex;flex-direction:row;align-items:center;justify-content:space-between;width:100px;z-index:10}.header-right-list img{width:20px}@media screen and (min-width: 720px){.header-left{width:60%}.header-left-burger{display:none}.header-left-nav{display:flex;flex-direction:row;align-items:center}.header-left-nav a{text-decoration:none;color:#000;font-family:"Montserrat";font-size:16px;margin-right:18px}.header-right-list{width:120px}.header-right-img{left:110px}}/*# sourceMappingURL=header.css.map */
+/* Error: Undefined variable.
+ *     ,
+ * 130 |         color: $red;
+ *     |                ^^^^
+ *     '
+ *   sass\modules\header.scss 130:16  root stylesheet */
+
+body::before {
+  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
+      "Droid Sans Mono", monospace, monospace;
+  white-space: pre;
+  display: block;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid black;
+  content: "Error: Undefined variable.\a     \2577 \a 130 \2502          color: $red;\d\a     \2502                 ^^^^\a     \2575 \a   sass\\modules\\header.scss 130:16  root stylesheet";
+}
