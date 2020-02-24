@@ -159,5 +159,65 @@ footer{
 // Styles for desktop version
 // 
 @media screen and (min-width:1200px){
-    
+    footer{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height:120px;
+    }
+
+    .footer-container{
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+    }
+
+    .footer-nav{
+        flex-direction: column;
+        align-items: flex-start;
+        margin-top:0px;
+    }
+
+    .footer-nav-col{
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .footer-nav-col a{
+        transition: 0.7s all ease-in-out;
+        margin-bottom: 0px;
+    }
+
+    .footer-nav-col a:hover{
+        color:black;
+    }
+
+    .footer-nav-col:last-child{
+        margin-left:0px;
+        margin-top:20px;
+    }
+
+    .footer-contact{
+        margin-top:0px;
+    }
+
+    .footer-contact-socials img{
+        cursor: pointer;
+    }
+
+    .footer-email{
+        margin-top:0px;
+    }
+
+    .footer-email-input{
+        width:300px;
+
+        input{
+            width:245px;
+        }
+
+        button{
+            cursor: pointer;
+        }
+    }
 }

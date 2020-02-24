@@ -254,3 +254,70 @@
         }
     }
 } 
+
+// 
+// Styles for desktop version
+//
+@media screen and (min-width:1200px){
+    .hero-section{
+        margin-top:50px;
+    }
+
+    .hero-boy{
+        img{
+            height:500px;
+        }
+    }
+
+    .hero-text{
+        img{
+            top:60%;
+            left:40%;
+        }
+    }
+
+    .character-section{
+        background-size: 110%;
+    }
+
+    .character-container-content{
+        width:900px;
+    }
+
+    .character-container-img{
+        height:500px;
+    }
+
+    .character-button{
+        transition: 0.7s all ease-in-out;
+    }
+
+    #pink{
+        .character-button:hover{
+            background-color: $pink;
+            color: white;
+        }
+    }
+
+    #green{
+        .character-button:hover{
+            background-color: $green;
+            color: white;
+        }
+    }
+
+    #orange{
+        .character-button:hover{
+            background-color: $orange;
+            color: white;
+        }
+    }
+
+    #blue{
+        .character-button:hover{
+            background-color: $blue;
+            color: white;
+        }
+    }
+    
+}

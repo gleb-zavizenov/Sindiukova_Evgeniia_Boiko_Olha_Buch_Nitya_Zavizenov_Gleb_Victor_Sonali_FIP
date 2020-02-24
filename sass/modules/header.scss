@@ -114,5 +114,19 @@ header{
 // Styles for desktop version
 // 
 @media screen and (min-width:1200px){
-    
+    .header-right-img{
+        left:300px;
+    }
+
+    .header-right-list img{
+        cursor: pointer;
+    }
+
+    .header-left-nav a:hover{
+        transition: 0.7s all ease-in-out;
+    }
+
+    .header-left-nav a:hover{
+        color: $red;
+    }
 }
