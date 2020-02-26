@@ -154,6 +154,22 @@
     }
 }
 
+#orange{
+    background-image: url('../images/yellow_bg.png');
+
+    .character-button{
+        color: $orange;
+    }
+}
+
+#blue{
+    background-image: url('../images/blue_bg.png');
+
+    .character-button{
+        color: $blue;
+    }
+}
+
 .character-section:nth-child(odd){
     .character-container-img{
         left:0;
