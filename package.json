@@ -1,0 +1,23 @@
+{
+  "name": "sindiukova_evgeniia_boiko_olha_buch_nitya_zavizenov_gleb_victor_sonali_fip",
+  "version": "1.0.0",
+  "description": "![Logo](/images/logo.svg)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "scss": "node-sass --watch sass -o css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gleb-zavizenov/Sindiukova_Evgeniia_Boiko_Olha_Buch_Nitya_Zavizenov_Gleb_Victor_Sonali_FIP.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gleb-zavizenov/Sindiukova_Evgeniia_Boiko_Olha_Buch_Nitya_Zavizenov_Gleb_Victor_Sonali_FIP/issues"
+  },
+  "homepage": "https://github.com/gleb-zavizenov/Sindiukova_Evgeniia_Boiko_Olha_Buch_Nitya_Zavizenov_Gleb_Victor_Sonali_FIP#readme",
+  "dependencies": {
+    "node-sass": "^4.13.1"
+  }
+}
