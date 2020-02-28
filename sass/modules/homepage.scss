@@ -92,7 +92,7 @@
     background-size: 400%;
     background-position: center center;
     background-repeat: no-repeat;
-    height: 350px;
+    height: 650px;
     margin-top:160px;
 }
 
@@ -139,7 +139,7 @@
 }
 
 #pink{
-    background-image: url('../images/pink_bg.png');
+    background-image: url('../images/pink_flat.svg');
 
     .character-button{
         color: $pink;
@@ -147,7 +147,7 @@
 }
 
 #green{
-    background-image: url('../images/green_bg.png');
+    background-image: url('../images/green_flat.svg');
 
     .character-button{
         color: $green;
@@ -155,7 +155,7 @@
 }
 
 #orange{
-    background-image: url('../images/yellow_bg.png');
+    background-image: url('../images/orange_flat.svg');
 
     .character-button{
         color: $orange;
@@ -163,7 +163,7 @@
 }
 
 #blue{
-    background-image: url('../images/blue_bg.png');
+    background-image: url('../images/blue_flat.svg');
 
     .character-button{
         color: $blue;
@@ -275,33 +275,127 @@
 // Styles for desktop version
 //
 @media screen and (min-width:1200px){
-    .hero-section{
-        margin-top:50px;
+
+    footer {
+        margin-top: 0px;
+        
     }
 
-    .hero-boy{
-        img{
-            height:500px;
+    #blue {
+        min-width: 100%;
+        min-height: 100vh;
+    }
+
+    #pink {
+        min-width: 100%;
+        min-height: 100vh;
+
+    }
+
+    #green {
+        min-width: 100%;
+        min-height: 100vh;
+
+    }
+
+    #orange {
+        min-width: 100%;
+        min-height: 100vh;
+
+    }
+
+    .orange-hero {
+        height: 110%;
+
+    }
+
+    .other-hero {
+        height: 140%;
+    }
+
+    .header-left {
+        width: 40%;
+    }
+
+    section {
+         margin-bottom:0px; 
+    }
+
+    
+    .back-img{
+        background: url('../images/bg.svg') no-repeat;
+        background-size: cover;
+        min-width: 100%;
+        min-height: 100%;
+        
+        
+
+        .hero-boy{
+            margin-left: 20%;
+            margin-top: 5%;
+
+            img{
+                height:600px;
+                
+            }
         }
     }
 
-    .hero-text{
-        img{
-            top:60%;
-            left:40%;
+   
+
+    .text-align-m{
+        h2 {
+            text-align: left;
         }
+        width:100%;
+        text-align: left;
+
+        
+    }
+
+    .hero-text-content {
+
+        margin-top: -65%;
+        margin-left: 20%;
+        line-height: 27px;
+
+    }
+
+    .header-right {
+        
+        justify-content: center; 
+        margin-left: 25%;
+
+        img {
+            width: 30px;
+        }
+        
+    }
+
+    .header-left a img {
+        width: 130%;
     }
 
     .character-section{
-        background-size: 110%;
+        
+        // background-size: 110%;
+        height: 610px;
+        margin-top:0px;
+        margin-bottom: 20px;
+
+       
     }
 
     .character-container-content{
         width:900px;
+        top: 0;
     }
 
     .character-container-img{
-        height:500px;
+        
+        top: 0%;
+
+        
     }
 
     .character-button{
@@ -310,6 +404,7 @@
 
     #pink{
         .character-button:hover{
+           
             background-color: $pink;
             color: white;
         }
@@ -335,5 +430,100 @@
             color: white;
         }
     }
+
+
+    .disclaimer-container{
+        margin-top: 100px;
+        margin-bottom: 100px;
+
+        h1 {
+            width: 700px;
+        }
+
+        h2 {
+            margin-top: 50px;
+            font-size: 30px;
+            text-transform: uppercase;
+            color: #FF1B4A;
+            margin-bottom: 60px;
+        }
+    }
+
+   .text-pink {
+       h2 {
+        
+           color: #9e005d;
+       }
+       p {
+           line-height: 40px;
+           font-size: 20px;
+       }
+   }
+
+   .text-green {
+    h2 {
+        color:#089685;
+
+       }
+    p {
+        
+        text-align: left;
+        line-height: 40px;
+        font-size: 20px;
+    }
+
+   }
+
+   .text-yellow {
+    h2 {
+
+        color: #ff470a;
+
+    }
+       p {
+        line-height: 40px;
+        font-size: 20px;
+
+       }
+
+   }
+
+   .text-blue {
+
+    h2 {
+        text-align: left;
+        color: #292d95;
+    }
+    p {
+        
+        text-align: left;
+        line-height: 40px;
+        font-size: 20px;
+
+    
+           }
+
+   }
+
+   .main-text {
+
+    line-height: 30px;
+    text-align: left;
+    font-size: 20px;
+    color: #7f807f;
+    width: 1000px;
+
+   }
+
+   .header-left-nav {
+       a {
+
+    color: #7f807f;
+    font-size: 20px;
+
+       }
+
+    
+}
     
 }
