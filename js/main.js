@@ -1,9 +1,9 @@
-import UsersComponent from "./components/UsersComponent.js";
+import SectionsComponent from "./components/SectionsComponent.js";
 
 
 const router = new VueRouter({
   routes: [
-    {path: "/", name: "home", component: UsersComponent}
+    {path: "/", name: "home", component: SectionsComponent}
   ]
 })
 
@@ -28,9 +28,9 @@ var vm = new Vue({
   },
 
   methods: {
-    getUserData() {
+    getContentData() {
       //do a fetch call here and get the user from the DB
-      const url = './includes/index.php?getUser=1';
+      const url = './includes/index.php?getContent=1';
 
       fetch(url) // get data from the DB 
       .then(res => res.json()) // translate JSON from DB to plain object
@@ -38,15 +38,12 @@ var vm = new Vue({
         console.log(data);
         
         // log it to the console (testing)
-        this.user.settings = data[0];
+        this.content.settings = data[0];
       })
       .catch((error) => console.error(error))
 
     },
-    setUserPrefs() {
-      // this is the preferences control, hit the api when ready (or use a component)
-      console.log('set user prefs here');
-    }, 
+   
 
     userLogin() {
       // call the login route, and / or load the login component

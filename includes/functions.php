@@ -1,7 +1,7 @@
 <?php
     require('connect.php');
 
-       function getUsers($conn) {
+       function getContent($conn) {
 
            $getData = 'SELECT * FROM main_sections';
            $runQuery = $conn->query($getData);
