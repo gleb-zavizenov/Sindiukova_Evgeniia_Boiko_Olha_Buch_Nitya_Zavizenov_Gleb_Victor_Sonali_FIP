@@ -1,0 +1,152 @@
+@import 'vars.scss';
+
+.login-page {
+    background: url('../images/bg_login.svg') center center no-repeat ;
+    background-size: cover;
+    height: 100vh;
+    min-width: 100%;
+
+    .logo-login {
+        margin-left: 25px;
+        margin-top: 25px;
+
+        img{
+            width:80px;
+        }
+   
+    }
+
+    .form-style {
+        background: white;
+        width: 260px;
+        height: 270px;
+        margin: 70px auto;
+        border-radius: 35px;
+
+        h2 {
+            color: $red;
+            text-transform: uppercase;
+            text-align: center;
+            padding-top:30px;
+            padding-bottom: 30px;
+           
+        }
+
+        .align-items-center {
+            width: 220px;
+            margin: 0 auto;
+        }
+
+        .not-display {
+            display: none;
+        }
+
+        input{
+            width: 220px;
+            background: transparent;
+            -webkit-background:  transparent;
+            -webkit-autofill: none;
+            border: 2px solid $red;
+            outline: 0;
+            margin-bottom: 20px;
+            height: 30px;
+            border-radius: 35px;
+        }
+
+        input::placeholder {
+            font-family: 'Montserrat', sans-serif;
+            text-align: center;
+            font-size: 17px;
+            
+        }
+
+        .colortext{
+            font-family: 'Montserrat', sans-serif;
+            font-size: 17px;
+            text-align: center;
+
+        }
+
+        .submit-button{
+            margin: 0 auto;
+            width:120px;
+
+            button {
+                margin-top:10px;
+                width:120px;
+                background-color: $red;
+                border-radius: 35px;
+                height: 35px;
+                border: none;
+                outline: 0;
+                color: white;
+                font-family: 'Montserrat', sans-serif;
+                font-size: 17px;
+                cursor: pointer;
+                transition: all .4s ease;
+
+
+            }
+
+            button:hover {
+                background-color: $pink;
+
+
+            }
+
+
+        }
+    }
+
+    
+}
+
+@media screen and (min-width:768px){
+    .login-page {
+
+        .logo-login {
+            margin-left: 40px;
+        }
+
+        .form-style {
+            width: 340px;
+            height: 350px;
+            margin: 70px auto 0 auto;
+    
+            h2 {
+                padding-top:50px;
+                padding-bottom: 60px;
+               
+            }
+    
+            .submit-button{
+                
+                button {
+                    margin-top:15px;
+                }
+    
+            }
+        }
+
+    }
+
+}
+
+@media screen and (min-width:1200px){
+
+    .login-page {
+
+    .logo-login {
+        margin-left: 330px;
+    }
+
+    .form-style {
+       
+        margin: 180px auto 0 710px;
+    }
+ 
+  }
+
+}
+
+
