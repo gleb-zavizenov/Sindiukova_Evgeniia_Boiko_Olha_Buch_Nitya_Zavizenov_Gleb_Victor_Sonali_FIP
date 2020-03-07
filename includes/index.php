@@ -5,6 +5,13 @@ include('functions.php');
 
 if(isset($_GET["getContent"])) {
     $content = getContent($pdo);
-
+ 
     echo json_encode($content);
-}
+} 
+
+if (isset($_GET['user'])) {
+    $user = getUser($pdo);
+
+echo json_encode($user);
+} 
+

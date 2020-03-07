@@ -1,11 +1,26 @@
 import SectionsComponent from "./components/SectionsComponent.js";
+import LoginComponent from "./components/LoginComponent.js";
+
 
 
 const router = new VueRouter({
   routes: [
-    {path: "/", name: "home", component: SectionsComponent}
+
+    {path: "/home", name: "home", component: SectionsComponent, meta: {
+      mainpageheader: true, mainpagefooter: true}},
+    {path: '/', name: "login", component: LoginComponent}
   ]
 })
+
+var foo = new Vue({
+  el: 'footer',
+  router,
+
+  data: {
+    mainpagefooter: false
+  }
+});
+
 
 var vm = new Vue({
   el: "#app",
@@ -13,11 +28,19 @@ var vm = new Vue({
 
   data: {
 
+    authenticated: false,
+    administrator: false,
+    mainpageheader:false,
+
+      mockAccount: {
+        username: "user",
+        password: "password"
+      },
+
+      user: [],
+
    
-    user: {
-      isLoggedIn: true,
-      settings: {}
-    },
+    
   },
 
   created: function() {
@@ -29,7 +52,6 @@ var vm = new Vue({
 
   methods: {
     getContentData() {
-      //do a fetch call here and get the user from the DB
       const url = './includes/index.php?getContent=1';
 
       fetch(url) // get data from the DB 
@@ -43,15 +65,34 @@ var vm = new Vue({
       .catch((error) => console.error(error))
 
     },
-   
 
-    userLogin() {
-      // call the login route, and / or load the login component
-      console.log('do login / logout on click');
-      this.user.isLoggedIn = (this.user.isLoggedIn) ? false : true;
+    setAuthenticated(status, data) {
+      // this.mainpageheader = status;
+      this.administrator = parseInt(data.isadmin); 
+      this.user = data; 
     },
 
+    logout() {
+      this.$router.push({ path: "/login" });
+      // this.mainpageheader = false;
+      this.administrator = false;
 
-  }
+    }
+   
 
-});
+
+
+  },
+  router: router
+
+}).$mount("#app");
+
+// router.beforeEach((to, from, next) =>  {
+//   console.log('router guard fired');
+//   if(vm.mainpageheader == false){
+//     next("/login");
+//   } else {
+//     next();
+//   }
+// });
+
