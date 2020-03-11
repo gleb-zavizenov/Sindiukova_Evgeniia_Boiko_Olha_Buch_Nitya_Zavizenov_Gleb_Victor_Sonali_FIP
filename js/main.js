@@ -1,5 +1,6 @@
 import SectionsComponent from "./components/SectionsComponent.js";
 import LoginComponent from "./components/LoginComponent.js";
+import SettingsComponent from "./components/SettingsComponent.js";
 
 
 
@@ -8,7 +9,9 @@ const router = new VueRouter({
 
     {path: "/home", name: "home", component: SectionsComponent, meta: {
       mainpageheader: true, mainpagefooter: true}},
-    {path: '/', name: "login", component: LoginComponent}
+    {path: '/', name: "login", component: LoginComponent},
+    {path: '/settingsadmin', name: "settings", component: SettingsComponent}
+
   ]
 })
 
@@ -67,15 +70,20 @@ var vm = new Vue({
     },
 
     setAuthenticated(status, data) {
-      // this.mainpageheader = status;
+      this.authenticated = status;
       this.administrator = parseInt(data.isadmin); 
       this.user = data; 
     },
 
     logout() {
-      this.$router.push({ path: "/login" });
-      // this.mainpageheader = false;
+      this.$router.push({ path: "/" });
+      this.authenticated = false;
       this.administrator = false;
+
+    },
+
+    settings() {
+      this.$router.push({ path: "/settingsadmin" });
 
     }
    
@@ -87,12 +95,12 @@ var vm = new Vue({
 
 }).$mount("#app");
 
-// router.beforeEach((to, from, next) =>  {
-//   console.log('router guard fired');
-//   if(vm.mainpageheader == false){
-//     next("/login");
-//   } else {
-//     next();
-//   }
-// });
+router.beforeEach((to, from, next) =>  {
+  console.log('router guard fired');
+  if(vm.authenticated == false){
+    next("/");
+  } else {
+    next();
+  }
+});
 

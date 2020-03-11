@@ -64,7 +64,7 @@ export default {
                     console.log(data);
 
                     
-                    this.$emit("", true, data[0]);
+                    this.$emit("authenticated", true, data[0]);
                     this.$router.replace({name: "home"});
                     
                 })
