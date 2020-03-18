@@ -40,38 +40,38 @@ export default {
     },
 
     methods: {
-
-        
-
         login() {
-            
-            //console.log(this.$parent.mockAccount.username);
-            if(this.input.username != "" && this.input.password != ""){
-                //use the FormData object to collect and send our params
+
+            if (this.input.username != "" && this.input.password != "") {
+                // fetch the user from the DB
+                // generate the form data
                 let formData = new FormData();
+
                 formData.append("username", this.input.username);
                 formData.append("password", this.input.password);
 
-                let url = "./includes/index.php?user=true";
+                let url = `./admin/admin_login.php`;
 
                 fetch(url, {
                     method: 'POST',
                     body: formData
                 })
-                .then(res => res.json())
-                .then(data => {
-
-                    console.log(data);
-
-                    
-                    this.$emit("authenticated", true, data[0]);
-                    this.$router.replace({name: "home"});
-                    
-                })
-                .catch((err) => console.log(err));
-
+                    .then(res => res.json())
+                    .then(data => {
+                        if (typeof data != "object") { // means that we're not getting a user object back
+                            console.warn(data);
+                            // just for testing
+                            alert("authentication failed, please try again");
+                        } else {
+                            this.$emit("authenticated", true, data);
+                            this.$router.replace({ name: "home" });
+                        }
+                    })
+                    .catch(function (error) {
+                        console.log(error);
+                    });
             } else {
-                console.error("inouts can't be blank");
+                console.log("A username and password must be present");
             }
         }
     }

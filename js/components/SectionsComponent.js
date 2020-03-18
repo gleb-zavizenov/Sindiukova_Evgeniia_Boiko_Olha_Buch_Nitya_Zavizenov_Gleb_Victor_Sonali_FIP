@@ -113,6 +113,7 @@ export default {
 
     methods: {
         fetchAllContent() {
+            // let url = `./admin/admin_content.php?getContent=true`;
             let url = `./includes/index.php?getContent=true`;
             fetch(url)
             .then(res => res.json())
@@ -122,10 +123,7 @@ export default {
     },
 
     components: {
-       
-
-        
-       
+         
        
     }
 }

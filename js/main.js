@@ -32,30 +32,20 @@ var vm = new Vue({
   data: {
 
     authenticated: false,
-    administrator: false,
+    administrator: true,
     mainpageheader:false,
-
-      mockAccount: {
-        username: "user",
-        password: "password"
-      },
-
-      user: [],
+    user: [],
 
    
     
   },
 
-  created: function() {
-    // run a fetch call and get the user data
-    console.log('created lifecycle hook fired here, go get user data');
-    // this.getUserData();
 
-  },
 
   methods: {
     getContentData() {
       const url = './includes/index.php?getContent=1';
+      // let url = `./admin/admin_content.php?getContent=1`;
 
       fetch(url) // get data from the DB 
       .then(res => res.json()) // translate JSON from DB to plain object
@@ -71,7 +61,7 @@ var vm = new Vue({
 
     setAuthenticated(status, data) {
       this.authenticated = status;
-      this.administrator = parseInt(data.isadmin); 
+      // this.administrator = parseInt(data.isadmin); 
       this.user = data; 
     },
 
@@ -95,12 +85,12 @@ var vm = new Vue({
 
 }).$mount("#app");
 
-router.beforeEach((to, from, next) =>  {
-  console.log('router guard fired');
-  if(vm.authenticated == false){
-    next("/");
-  } else {
-    next();
-  }
-});
+// router.beforeEach((to, from, next) =>  {
+//   console.log('router guard fired');
+//   if(vm.authenticated == false){
+//     next("/");
+//   } else {
+//     next();
+//   }
+// });
 

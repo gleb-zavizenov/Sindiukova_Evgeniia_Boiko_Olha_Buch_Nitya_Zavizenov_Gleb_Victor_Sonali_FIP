@@ -1,7 +1,142 @@
 .settings-page {
-    background: url('../images/bg_login.svg') center center no-repeat ;
+    background: url('../images/bg_login_2.svg') center center no-repeat;
     background-size: cover;
     height: 100vh;
     min-width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    .form-style-delete {
+        background: white;
+        width: 500px;
+        height: 400px;
+        margin: 180px auto;
+        border-radius: 35px;
+
+    }
+
+    .form-style {
+        background: white;
+        width: 350px;
+        height: 400px;
+        margin: 180px auto;
+        border-radius: 35px;
+    }
+
+    h2 {
+        color: $red;
+        text-align: center;
+        padding-top:30px;
+        padding-bottom: 30px;
+    }
+
+    .align-items-center {
+        width: 220px;
+        margin: 0 auto;
+    }
+
+    .not-display {
+        display: none;
+    }
+
+    input{
+        width: 220px;
+        background: transparent;
+        -webkit-background:  transparent;
+        -webkit-autofill: none;
+        border: 2px solid $red;
+        outline: 0;
+        margin-bottom: 20px;
+        height: 30px;
+        border-radius: 35px;
+    }
+
+    input::placeholder {
+        font-family: 'Montserrat', sans-serif;
+        text-align: center;
+        font-size: 17px;
+        
+    }
+
+    table {
+        margin-left: 15px;
+        margin-right: 15px;
+        width: 470px;
+        text-align: center;
+
+    }
+
+    th {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 17px;
+        text-align: center;
+        padding-bottom: 15px;
+        
+
+    }
+
+    td {
+        font-family: 'Montserrat', sans-serif;
+    }
+
+    .colortext{
+        font-family: 'Montserrat', sans-serif;
+        font-size: 17px;
+        text-align: center;
+
+    }
+
+    .deleteuserbutton {
+        margin-top:10px;
+        width:100px;
+        background-color: $red;
+        border-radius: 35px;
+        height: 30px;
+        border: none;
+        outline: 0;
+        color: white;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 17px;
+        cursor: pointer;
+        transition: all .4s ease;
+
+    }
+
+    .deleteuserbutton:hover {
+        background-color: $pink;
+
+
+    }
+
+    .submit-button{
+        margin: 0 auto;
+        width:120px;
+
+        button {
+            margin-top:10px;
+            width:120px;
+            background-color: $red;
+            border-radius: 35px;
+            height: 35px;
+            border: none;
+            outline: 0;
+            color: white;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 17px;
+            cursor: pointer;
+            transition: all .4s ease;
+
+
+        }
+
+        button:hover {
+            background-color: $pink;
+
+
+        }
+
+
+    }
 
 }
