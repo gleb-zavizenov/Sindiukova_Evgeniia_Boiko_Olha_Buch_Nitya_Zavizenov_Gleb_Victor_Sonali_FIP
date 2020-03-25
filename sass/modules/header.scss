@@ -102,6 +102,7 @@ header{
             font-family: 'Montserrat';
             font-size:16px;
             margin-left: 30px;
+            font-weight: 500;
         }
 
         a:last-child{
@@ -130,8 +131,16 @@ header{
 // Styles for desktop version
 // 
 @media screen and (min-width:1200px){
-    .header-right-img{
-        left:300px;
+    .header-left{
+        width:50%;
+    }
+
+    .header-left-nav a{
+        margin-left: 40px;
+    }
+
+    .header-right-img {
+        left: 180px;
     }
 
     .header-right-list img{
