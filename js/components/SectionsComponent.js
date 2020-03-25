@@ -94,6 +94,9 @@ export default {
             </div>
         </section> 
         </div> 
+        <section class="container all-heroes">
+            <img src="./images/all_heroes.svg">
+        </section>
         </div>
         
     `,
