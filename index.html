@@ -23,16 +23,17 @@
                                 <img src="images/burger-red.svg" alt="burger-img">
                             </div>
                             <div class="header-left-nav">
-                                <a href="index.html">Home</a>
-                                <a href="#">News</a>
-                                <a href="#">About</a>
+                                <a href="#pink">Love</a>
+                                <a href="#green">Treatment</a>
+                                <a href="#orange">Protection</a>
+                                <a href="#blue">Connection</a>
                             </div>
                         </div>
                         <div class="header-right">
                             <div class="header-right-list">
                                 <img v-if="authenticated" v-on:click="logout()" src="images/in_out.svg" alt="logout">
                                 <img v-if="authenticated" src="images/login1.svg" alt="profile">
-                                <img src="images/settings1.svg" v-on:click="settings()" v-if="administrator" alt="settings">
+                                <img v-if="authenticated" src="images/settings1.svg" v-on:click="settings()" v-if="administrator" alt="settings">
                             </div>
                             <img src="images/purple-round.svg" alt="" class="header-right-img">
                         </div>
