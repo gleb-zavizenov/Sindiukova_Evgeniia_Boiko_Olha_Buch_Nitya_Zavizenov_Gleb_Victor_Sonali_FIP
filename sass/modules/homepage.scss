@@ -224,5 +224,121 @@
 // Styles for tablet version
 //
 @media screen and (min-width:720px){
+    .hero-section{
+        margin-top:50px;
+    }
+    
+    .hero-container{
+        width:720px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
 
+    .hero-boy{
+        width:25%;
+
+        .hero-boy-img{
+            display: block;
+            width:100%;
+        }
+    }
+
+    .hero-boy-mobile{
+        display: none;
+    }
+
+    .hero-text{
+        width:51%;
+
+        img{
+            top:50%;
+            transform: translate(-60%, -50%);
+            width:350%;
+        }
+    }
+
+    .hero-text-content{
+        align-items: flex-start;
+        text-align: start;
+        margin-top:0px;
+
+        p{
+            margin-top:25px;
+        }
+    }
+
+    .disclaimer-section{
+        margin-top:100px;
+        margin-bottom: 60px;
+    }
+
+    .character-container-img-mobile{
+        display: none;
+    }
+
+    .character-container{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .character-container-content{
+        align-items: flex-start;
+        text-align: start;
+        width:70%;
+
+        h3{
+            margin-top:15px;
+        }
+
+        p{
+            margin-top:25px;
+        }
+    }
+
+    .character-container-img-tablet{
+        display: block;
+        width:20%;
+    }
+
+    .character-buttons {
+        justify-content: flex-start;
+        margin-top:30px;
+
+        a:last-child{
+            margin-left:30px;
+        }
+    }
+
+    .character-section{
+        height:660px;
+        background-size: 240%;
+        background-position-y: 73%;
+        background-position-x: center;
+    }
+
+    #green{
+        background-size: 197%;
+        background-position-y: 34%;
+        background-position-x: 73%;
+
+        .character-container{
+            flex-direction: row-reverse;
+        }
+    }
+
+    #orange{
+        background-size: 191%;
+        background-position-y: 35%;
+        background-position-x: 33%;
+        height: 703px;
+    }
+
+    #blue{
+        background-size: 200%;
+        background-position-y: top;
+    }
 }

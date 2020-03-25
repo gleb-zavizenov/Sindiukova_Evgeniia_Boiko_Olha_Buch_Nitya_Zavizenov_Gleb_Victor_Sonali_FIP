@@ -77,7 +77,7 @@ pre {
     }
 
     section{
-        margin-bottom: 100px;
+        
     }
 
     h1{
@@ -87,10 +87,19 @@ pre {
 
     h2{
         font-size: 38px;
+        line-height: 44px;
+    }
+
+    h3{
+        font-family: 'Montserrat';
+        font-weight: 600;
+        font-size:18px;
+        line-height: 22px;
     }
 
     p{
         font-size: 16px;
+        line-height: 22px;
     }
 } 
 
