@@ -44,7 +44,7 @@ export default {
                         <a href="#" target="_blank" class="character-button">Get help</a>
                     </div>
                 </div>
-                <img class="character-container-img other-hero" :src="'images/'+ content.img" alt="love">
+                <img class="character-container-img character-container-img-tablet other-hero" :src="'images/'+ content.img" alt="love">
                 <img class="character-container-img character-container-img-mobile other-hero" :src="'images/mobile-'+ content.img" alt="love">
             </div>
         </section> 
@@ -59,7 +59,7 @@ export default {
                         <a href="#" target="_blank" class="character-button">Get help</a>
                     </div>
                 </div>
-                <img class="character-container-img green-hero" :src="'images/'+ content.img" alt="character">
+                <img class="character-container-img character-container-img-tablet green-hero" :src="'images/'+ content.img" alt="character">
                 <img class="character-container-img character-container-img-mobile" :src="'images/mobile-'+ content.img" alt="treatment">
             </div>
         </section>
@@ -74,7 +74,7 @@ export default {
                         <a href="#" target="_blank" class="character-button">Get help</a>
                     </div>
                 </div>
-                <img class="character-container-img orange-hero" :src="'images/'+ content.img" alt="character">
+                <img class="character-container-img character-container-img-tablet orange-hero" :src="'images/'+ content.img" alt="character">
                 <img class="character-container-img character-container-img-mobile" :src="'images/mobile-'+ content.img" alt="orange">
             </div>
         </section>
@@ -89,7 +89,7 @@ export default {
                         <a href="#" target="_blank" class="character-button">Get help</a>
                     </div>
                 </div>
-                <img class="character-container-img other-hero" :src="'images/'+ content.img" alt="character">
+                <img class="character-container-img character-container-img-tablet other-hero" :src="'images/'+ content.img" alt="character">
                 <img class="character-container-img character-container-img-mobile" :src="'images/mobile-'+ content.img" alt="blue">
             </div>
         </section> 
