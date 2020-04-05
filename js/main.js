@@ -40,6 +40,10 @@ var vm = new Vue({
     
   },
 
+  mounted(){
+    this.closePopup();
+  },
+
 
 
   methods: {
@@ -75,11 +79,14 @@ var vm = new Vue({
     settings() {
       this.$router.push({ path: "/settingsadmin" });
 
+    },
+
+    closePopup(){
+      let popup = document.querySelector(".popup");
+      popup.addEventListener('click', function(){
+          popup.classList.remove("popup-show");
+      });
     }
-   
-
-
-
   },
   router: router
 
