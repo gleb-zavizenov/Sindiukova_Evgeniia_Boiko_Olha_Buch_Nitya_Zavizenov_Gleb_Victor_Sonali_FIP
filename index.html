@@ -13,6 +13,28 @@
 </head>
 <body>
     <main id="app">
+            <div class="popup">
+                <div class="popup-box">
+                    <div class="popup-container">
+                        <h2>Become Stronger With Us</h2>
+                        <p>Here our local community and health organization that can help you any time with any questions!
+                            <br>
+                            #endstigma with us!
+                        </p>
+                        <div class="popup-row">
+                            <a href="http://www.hivaidsconnection.ca/?fbclid=IwAR0PIFTmEEtMPGokZQXNUNhnal7iqDgoTpJWpu0kyYbpY2sCzg2Njkjpb7M" target="_blank">
+                                <img src="images/logo_hiv.png" alt="hiv-logo">
+                            </a>
+                            <a href="https://lihc.on.ca/?fbclid=IwAR2s5qni1smsVZvtMn01FxW9mVTMLVFwIFlPXh1EDqcKQcVikX4eyptuAPo" target="_blank">
+                                <img src="images/logo_LICHC.png" alt="lihc-logo">
+                            </a>
+                        </div>
+                        <a href="https://www.healthunit.com/?fbclid=IwAR2c3OaaAjs7TLOPKCmD8XmfiVdPueskNlEcWxbp1DQBZ36wlbgwIjdA4n8" target="_blank" class="popup-box-img">
+                            <img src="images/logo_ML.png" alt="ml-logo">
+                        </a>
+                    </div>
+                </div>
+            </div>
             <header v-show="$route.meta.mainpageheader">
                     <div class="container header-container">
                         <div class="header-left">
@@ -32,8 +54,10 @@
                         <div class="header-right">
                             <div class="header-right-list">
                                 <img v-if="authenticated" v-on:click="logout()" src="images/in_out.svg" alt="logout">
-                                <img v-if="authenticated" src="images/login1.svg" alt="profile">
-                                <img v-if="authenticated" src="images/settings1.svg" v-on:click="settings()" v-if="administrator" alt="settings">
+                                <router-link to="/admin" v-if="!authenticated">
+                                    <img src="images/login1.svg" alt="profile">
+                                </router-link>
+                                <img v-if="authenticated" class="settings-icon" src="images/settings1.svg" v-on:click="settings()" v-if="administrator" alt="settings">
                             </div>
                             <img src="images/purple-round.svg" alt="" class="header-right-img">
                         </div>

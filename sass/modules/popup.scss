@@ -1,0 +1,91 @@
+// 
+// Styles for mobile version
+// 
+.popup{
+    width:100%;
+    height:100%;
+    background-color: rgba($color: #000000, $alpha: 0.8);
+    position: fixed;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    z-index:100;
+    opacity: 0;
+    display: none;
+    transition: 0.7s all ease-in-out;
+}
+
+.popup-show{
+    opacity: 1;
+    display: flex;
+}
+
+.popup-box{
+    background: url('../images/lb_pink.png');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    width:320px;
+    height:400px;
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.popup-container{
+    width:280px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    h2{
+        color:white;
+    }
+
+    p{
+        color:white;
+        margin-top:15px;
+    }
+}
+
+.popup-row{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 5px;
+    margin-top:15px;
+
+    a{
+        width:45%;
+
+        img{
+            width:100%;
+        }
+    }
+}
+
+.popup-box-img{
+    width:100%;
+
+    img{
+        width:100%;
+    }
+}
+
+@media screen and (min-width:720px){
+
+    .popup-box{
+        width:720px;
+        height:660px;
+    }
+
+    .popup-container{
+        width:500px;
+    }
+}

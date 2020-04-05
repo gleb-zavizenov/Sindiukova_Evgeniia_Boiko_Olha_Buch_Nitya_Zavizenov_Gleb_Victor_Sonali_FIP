@@ -7,10 +7,10 @@ import SettingsComponent from "./components/SettingsComponent.js";
 const router = new VueRouter({
   routes: [
 
-    {path: "/home", name: "home", component: SectionsComponent, meta: {
+    {path: "/", name: "home", component: SectionsComponent, meta: {
       mainpageheader: true, mainpagefooter: true}},
-    {path: '/', name: "login", component: LoginComponent},
-    {path: '/settingsadmin', name: "settings", component: SettingsComponent}
+    {path: '/login', name: "login", component: LoginComponent},
+    {path: '/admin', name: "admin", component: SettingsComponent, meta: { requiresAuth: true }}
 
   ]
 })
@@ -30,17 +30,25 @@ var vm = new Vue({
   router,
 
   data: {
-
     authenticated: false,
     administrator: true,
     mainpageheader:false,
     user: [],
-
-   
-    
   },
 
+  created(){
+    if(localStorage.getItem("user")){
+      let retrievedUser = JSON.parse(localStorage.getItem("user"));
+      this.authenticated = true;
+      this.user = retrievedUser;
+    } else {
+      this.$router.push({ path: "/" });
+    }
+  },
 
+  mounted(){
+    this.closePopup();
+  },
 
   methods: {
     getContentData() {
@@ -66,31 +74,42 @@ var vm = new Vue({
     },
 
     logout() {
+      if(localStorage.getItem('user')){
+        localStorage.removeItem('user');
+      }
       this.$router.push({ path: "/" });
       this.authenticated = false;
       this.administrator = false;
-
     },
 
     settings() {
-      this.$router.push({ path: "/settingsadmin" });
+      this.$router.push({ path: "/admin" });
+    },
 
+    closePopup(){
+      let popup = document.querySelector(".popup");
+      popup.addEventListener('click', function(){
+          popup.classList.remove("popup-show");
+      });
     }
-   
-
-
-
   },
   router: router
 
 }).$mount("#app");
 
-// router.beforeEach((to, from, next) =>  {
-//   console.log('router guard fired');
-//   if(vm.authenticated == false){
-//     next("/");
-//   } else {
-//     next();
-//   }
-// });
+router.beforeEach((to,from,next) => {
+  let Authenticated = vm.authenticated;
+
+  if(to.matched.some(record => record.meta.requiresAuth)){
+    if(Authenticated){
+        next();
+    } else {
+      // console.log("redirecting user to login");
+      next({name: 'login'});
+    }
+  } else {
+    next();
+    // console.log('Page does not require auth');
+  }
+});
 

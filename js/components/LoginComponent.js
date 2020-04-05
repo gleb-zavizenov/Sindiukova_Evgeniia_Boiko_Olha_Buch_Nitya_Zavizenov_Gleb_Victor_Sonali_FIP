@@ -64,7 +64,8 @@ export default {
                             alert("authentication failed, please try again");
                         } else {
                             this.$emit("authenticated", true, data);
-                            this.$router.replace({ name: "home" });
+                            localStorage.setItem('user', JSON.stringify(data[0]));
+                            this.$router.replace({ name: "admin" });
                         }
                     })
                     .catch(function (error) {

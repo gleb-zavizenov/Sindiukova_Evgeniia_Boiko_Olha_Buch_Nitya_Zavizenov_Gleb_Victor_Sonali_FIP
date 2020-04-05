@@ -40,8 +40,8 @@ export default {
                     <h3>{{content.section_hashtag}}</h3>
                     <pre><p>{{content.section_text}}</p></pre>
                     <div class="character-buttons">
-                        <a href="#" target="_blank" class="character-button">More info</a>
-                        <a href="#" target="_blank" class="character-button">Get help</a>
+                        <a href="#" @click.prevent="showPopup(content.popup)" target="_blank" class="character-button">More info</a>
+                        <a href="http://www.hivaidsconnection.ca/?fbclid=IwAR3Lufa_M4p_V6fmkUCWUxCzsfVi_MHBy_I5VA3aiULxYL5tkzslWV-FG_Y" target="_blank" class="character-button">Get help</a>
                     </div>
                 </div>
                 <img class="character-container-img character-container-img-tablet other-hero" :src="'images/'+ content.img" alt="love">
@@ -55,8 +55,8 @@ export default {
                     <h3>{{content.section_hashtag}}</h3>
                     <p><pre>{{content.section_text}}</pre></p>
                     <div class="character-buttons">
-                        <a href="#" target="_blank" class="character-button">More info</a>
-                        <a href="#" target="_blank" class="character-button">Get help</a>
+                        <a href="#" @click.prevent="showPopup(content.popup)" target="_blank" class="character-button">More info</a>
+                        <a href="http://www.hivaidsconnection.ca/?fbclid=IwAR3Lufa_M4p_V6fmkUCWUxCzsfVi_MHBy_I5VA3aiULxYL5tkzslWV-FG_Y" target="_blank" class="character-button">Get help</a>
                     </div>
                 </div>
                 <img class="character-container-img character-container-img-tablet green-hero" :src="'images/'+ content.img" alt="character">
@@ -70,8 +70,8 @@ export default {
                     <h3>{{content.section_hashtag}}</h3>
                     <p><pre>{{content.section_text}}</pre></p>
                     <div class="character-buttons">
-                        <a href="#" target="_blank" class="character-button">More info</a>
-                        <a href="#" target="_blank" class="character-button">Get help</a>
+                        <a href="#" @click.prevent="showPopup(content.popup)" target="_blank" class="character-button">More info</a>
+                        <a href="http://www.hivaidsconnection.ca/?fbclid=IwAR3Lufa_M4p_V6fmkUCWUxCzsfVi_MHBy_I5VA3aiULxYL5tkzslWV-FG_Y" target="_blank" class="character-button">Get help</a>
                     </div>
                 </div>
                 <img class="character-container-img character-container-img-tablet orange-hero" :src="'images/'+ content.img" alt="character">
@@ -85,8 +85,8 @@ export default {
                     <h3>{{content.section_hashtag}}</h3>
                     <p><pre>{{content.section_text}}</pre></p>
                     <div class="character-buttons">
-                        <a href="#" target="_blank" class="character-button">More info</a>
-                        <a href="#" target="_blank" class="character-button">Get help</a>
+                        <a href="#" @click.prevent="showPopup(content.popup)" target="_blank" class="character-button">More info</a>
+                        <a href="http://www.hivaidsconnection.ca/?fbclid=IwAR3Lufa_M4p_V6fmkUCWUxCzsfVi_MHBy_I5VA3aiULxYL5tkzslWV-FG_Y" target="_blank" class="character-button">Get help</a>
                     </div>
                 </div>
                 <img class="character-container-img character-container-img-tablet other-hero" :src="'images/'+ content.img" alt="character">
@@ -122,6 +122,11 @@ export default {
                 this.contentList = data;
             })
             .catch((err) => {console.error(err)})
+        },
+        showPopup(background){
+            let imageUrl = `url('./images/${background}')`;
+            document.querySelector(".popup-box").style.backgroundImage = imageUrl;
+            document.querySelector(".popup").classList.add("popup-show");
         }
     }
 }
