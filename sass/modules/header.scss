@@ -66,13 +66,17 @@ header{
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     width:100px;
     z-index: 10;
 
     img{
         width:20px;
     }
+}
+
+.settings-icon{
+    margin-left:30px;
 }
 
 // 
@@ -145,6 +149,12 @@ header{
 
     .header-right-list img{
         cursor: pointer;
+    }
+
+    .header-right-list a{
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 
     .header-left-nav a:hover{
