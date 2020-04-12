@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:8889
--- Generation Time: Apr 12, 2020 at 03:03 AM
+-- Generation Time: Apr 12, 2020 at 02:33 PM
 -- Server version: 5.7.25
 -- PHP Version: 7.3.1
 
@@ -68,7 +68,7 @@ CREATE TABLE `tbl_user` (
 --
 
 INSERT INTO `tbl_user` (`user_id`, `user_fname`, `user_name`, `user_pass`, `user_email`, `user_ip`) VALUES
-(2, 'Protection', 'protection777', 'password', 'protection@gmail.com', '::1');
+(1, 'Protection', 'protection777', 'password', 'protection@gmail.com', '::1');
 
 --
 -- Indexes for dumped tables
@@ -94,13 +94,13 @@ ALTER TABLE `tbl_user`
 -- AUTO_INCREMENT for table `tbl_main_sections`
 --
 ALTER TABLE `tbl_main_sections`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
 
 --
 -- AUTO_INCREMENT for table `tbl_user`
 --
 ALTER TABLE `tbl_user`
-  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
