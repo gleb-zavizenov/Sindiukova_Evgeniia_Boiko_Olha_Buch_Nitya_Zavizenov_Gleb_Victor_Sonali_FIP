@@ -366,13 +366,29 @@
 // Styles for desktop version
 // 
 @media screen and (min-width:1200px){
+
+    .hero-text-content {
+        margin-top: -150px;
+        p {
+        line-height: 28px;
+        }
+    }
+
+    .heroes-content-header {
+        
+        background: url('../images/bg_1.svg') no-repeat center;
+        background-size: contain;
+        
+        width: 100%;
+        height: 1205px;
+
+    }
     .heroes-main-content {
         background: url('../images/bg_main_3.svg') no-repeat center;
         background-size: cover;
         
-        min-width: 100%;
+        width: 1872px;
         min-height: 100%;
-        // height: 3500px;
 
     }
 
@@ -386,6 +402,7 @@
 
     .hero-text img{
         width:190%;
+        display: none;
     }
 
     .main-content-section:last-child{

@@ -3,29 +3,29 @@ export default {
         <div class="settings-page">
             <div class="form-style-update">
             <h2>Update</h2>
-                <form @submit.prevent="editContent">
-                    <div class="align-items-center">
+                <form @submit.prevent="editContent" enctype="multipart/form-data">
+                    <div class="align-items-center-update">
                         <div class="col-md-3 my-1">
-                            <input name="id" type="text" class="colortext" id="inlineFormInputFName" placeholder="id" required>
+                        <input name="id" type="text" class="colortext" id="inlineFormInputFName" placeholder="Id">
                         </div>
                         <div class="col-md-3 my-1">
-                            <input name="section_header" type="text" class="colortext" id="inlineFormUsername" placeholder="header">
+                        <textarea name="section_header" type="text" class="colortext" id="inlineFormUsername" placeholder="Main Header"></textarea>
                         </div>
                         <div class="col-md-3 my-1">
-                        <input name="section_text" type="text" class="colortext" id="inlineFormUsername" placeholder="text">
+                        <textarea name="section_text" type="text" class="colortext" id="inlineFormUsername" placeholder="Main Text"></textarea>
                         </div>
                         <div class="col-md-3 my-1">
-                        <input name="section_hashtag" type="text" class="colortext" placeholder="hashtag" required>
+                        <input name="section_hashtag" type="text" class="colortext" placeholder="Hashtag">
                         </div>
                         <div class="col-md-3 my-1">
-                        <input name="section_color" type="text" class="colortext" placeholder="color" required>
+                        <input name="section_color" type="text" class="colortext" placeholder="Color">
                         </div>
                         <div class="col-md-3 my-1">
-                        <input name="img" type="text" class="colortext" placeholder="image" required>
+                        <input name="popup" type="text" class="colortext" placeholder="Popup">
                         </div>
                         <div class="col-md-3 my-1">
-                        <input name="popup" type="text" class="colortext" placeholder="popup" required>
-                        </div>
+                        <input id="con-create-style" name="img" type="file" class="colortext" placeholder="image">
+                        </div>  
                         <div class="submit-button">
                             <button type="submit">Update</button>
                         </div>

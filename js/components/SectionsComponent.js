@@ -3,6 +3,35 @@
 export default {
     template: `
         <div class="main-content">
+        <section class="heroes-content-header">
+        <header v-show="$route.meta.mainpageheader">
+                    <div class="container header-container">
+                        <div class="header-left">
+                            <a class="header-left-link" href="index.html" >
+                                <img src="images/logo.svg" alt="logo">
+                            </a>
+                            <div class="header-left-burger">
+                                <img src="images/burger-red.svg" alt="burger-img">
+                            </div>
+                            <div class="header-left-nav">
+                                <a href="#pink">Love</a>
+                                <a href="#green">Treatment</a>
+                                <a href="#orange">Protection</a>
+                                <a href="#blue">Connection</a>
+                            </div>
+                        </div>
+                        <div class="header-right">
+                            <div class="header-right-list">
+                                <img v-if="authenticated" v-on:click="logout()" src="images/in_out.svg" alt="logout">
+                                <router-link to="/admin" v-if="!authenticated">
+                                    <img src="images/login1.svg" alt="profile">
+                                </router-link>
+                                <img v-if="authenticated" class="settings-icon" src="images/settings1.svg" v-on:click="settings()" v-if="administrator" alt="settings">
+                            </div>
+                            <img src="images/purple-round.svg" alt="" class="header-right-img">
+                        </div>
+                    </div>
+        </header>
         <div class="main-content-section" v-for="content in contentList" >
         <section class="hero-section" v-if="content.id === '1'">
             <div class="container hero-container" >
@@ -34,6 +63,7 @@ export default {
             </div>
         </section>
         </div>
+        </section>
         <section class="heroes-main-content">
         <div class="main-content-section" v-for="content in contentList">
         <section class="character-section" id="pink" v-if="content.id === '3'">

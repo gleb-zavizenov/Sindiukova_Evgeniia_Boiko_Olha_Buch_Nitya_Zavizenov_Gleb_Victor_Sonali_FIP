@@ -135,6 +135,7 @@ header{
 // Styles for desktop version
 // 
 @media screen and (min-width:1200px){
+
     .header-left{
         width:50%;
     }
@@ -145,10 +146,12 @@ header{
 
     .header-right-img {
         left: 180px;
+        // display: none;
     }
 
     .header-right-list img{
         cursor: pointer;
+        width: 28px;
     }
 
     .header-right-list a{

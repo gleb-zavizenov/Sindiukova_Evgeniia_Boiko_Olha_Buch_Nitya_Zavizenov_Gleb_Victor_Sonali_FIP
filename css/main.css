@@ -207,7 +207,8 @@ header {
   .header-right-img {
     left: 180px; }
   .header-right-list img {
-    cursor: pointer; }
+    cursor: pointer;
+    width: 28px; }
   .header-right-list a {
     display: flex;
     align-items: center;
@@ -620,17 +621,27 @@ footer {
       width: 80%; } }
 
 @media screen and (min-width: 1200px) {
+  .hero-text-content {
+    margin-top: -150px; }
+    .hero-text-content p {
+      line-height: 28px; }
+  .heroes-content-header {
+    background: url("../images/bg_1.svg") no-repeat center;
+    background-size: contain;
+    width: 100%;
+    height: 1205px; }
   .heroes-main-content {
     background: url("../images/bg_main_3.svg") no-repeat center;
     background-size: cover;
-    min-width: 100%;
+    width: 1872px;
     min-height: 100%; }
   .hero-container {
     width: 1200px; }
   .hero-boy {
     width: 15%; }
   .hero-text img {
-    width: 190%; }
+    width: 190%;
+    display: none; }
   .main-content-section:last-child {
     margin-bottom: 100px; }
   .character-container-content {
@@ -772,36 +783,56 @@ footer {
   height: 100vh;
   min-width: 100%;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-evenly; }
-  .settings-page .routes-flex {
-    display: flex;
-    flex-direction: column;
-    justify-content: center; }
-  .settings-page .form-style-delete {
-    background: white;
-    width: 850px;
-    height: 600px;
-    margin: 180px auto;
-    border-radius: 35px; }
-    .settings-page .form-style-delete td {
-      height: 30px; }
-    .settings-page .form-style-delete thead {
-      height: 50px; }
   .settings-page .form-style-update {
     background: white;
-    width: 400px;
-    height: 600px;
+    width: 360px;
+    height: 620px;
     margin: 130px auto;
     border-radius: 35px; }
+    .settings-page .form-style-update form {
+      margin-bottom: 20px; }
+    .settings-page .form-style-update .align-items-center-update {
+      width: 300px;
+      margin: 0 auto; }
+    .settings-page .form-style-update input {
+      width: 300px;
+      background: transparent;
+      -webkit-background: transparent;
+      -webkit-autofill: none;
+      border: 2px solid #FF1B4A;
+      outline: 0;
+      margin-bottom: 20px;
+      height: 30px;
+      border-radius: 10px; }
+    .settings-page .form-style-update input::placeholder {
+      font-family: 'Montserrat', sans-serif;
+      text-align: center;
+      font-size: 17px; }
+    .settings-page .form-style-update textarea {
+      width: 300px;
+      background: transparent;
+      -webkit-background: transparent;
+      -webkit-autofill: none;
+      border: 2px solid #FF1B4A;
+      outline: 0;
+      margin-bottom: 20px;
+      height: 60px;
+      border-radius: 10px; }
+    .settings-page .form-style-update .colortext {
+      padding-top: 2px; }
+    .settings-page .form-style-update textarea::placeholder {
+      padding-top: 5px; }
   .settings-page .form-style-content-create {
     background: white;
-    width: 400px;
-    height: 550px;
+    width: 350px;
+    height: 560px;
     margin: 130px auto;
     border-radius: 35px; }
     .settings-page .form-style-content-create form {
-      margin-top: 20px; }
+      margin-top: 20px;
+      margin-bottom: 10px; }
     .settings-page .form-style-content-create textarea {
       width: 300px;
       background: transparent;
@@ -811,7 +842,7 @@ footer {
       outline: 0;
       margin-bottom: 20px;
       height: 60px;
-      border-radius: 5px; }
+      border-radius: 10px; }
     .settings-page .form-style-content-create .colortext {
       padding-top: 2px; }
     .settings-page .form-style-content-create textarea::placeholder {
@@ -828,13 +859,170 @@ footer {
       outline: 0;
       margin-bottom: 20px;
       height: 30px;
-      border-radius: 5px; }
+      border-radius: 10px; }
     .settings-page .form-style-content-create input::placeholder {
       font-family: 'Montserrat', sans-serif;
       text-align: center;
       font-size: 17px; }
     .settings-page .form-style-content-create #con-create-style {
       border: none; }
+  .settings-page .form-style-delete {
+    background: white;
+    width: 375px;
+    height: 600px;
+    margin: 180px auto;
+    border-radius: 35px; }
+    .settings-page .form-style-delete table {
+      width: 350px;
+      font-size: 10px; }
+    .settings-page .form-style-delete td {
+      height: 30px; }
+    .settings-page .form-style-delete thead {
+      height: 50px; }
+  .settings-page .routes-flex {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; }
+  .settings-page .style-link {
+    text-decoration: none;
+    color: #FF1B4A;
+    font-family: 'Chango';
+    font-size: 23px;
+    display: inline-block;
+    margin: 20px auto 0 auto; }
+  .settings-page .style-link:hover {
+    color: #b62487; }
+  .settings-page .form-style {
+    background: #fff;
+    width: 300px;
+    height: 360px;
+    margin: 30px auto 30px auto;
+    border-radius: 35px; }
+    .settings-page .form-style input {
+      width: 220px;
+      background: transparent;
+      -webkit-background: transparent;
+      -webkit-autofill: none;
+      border: 2px solid #FF1B4A;
+      outline: 0;
+      margin-bottom: 20px;
+      height: 30px;
+      border-radius: 35px; }
+    .settings-page .form-style input::placeholder {
+      font-family: 'Montserrat', sans-serif;
+      text-align: center;
+      font-size: 17px; }
+  .settings-page h2 {
+    color: #FF1B4A;
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 30px; }
+  .settings-page .align-items-center {
+    width: 220px;
+    margin: 0 auto; }
+  .settings-page .not-display {
+    display: none; }
+  .settings-page table {
+    margin-left: 15px;
+    margin-right: 15px;
+    width: 800px;
+    text-align: center; }
+  .settings-page th {
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    padding-bottom: 15px; }
+  .settings-page td {
+    font-family: 'Montserrat', sans-serif;
+    max-width: 300px; }
+  .settings-page .colortext {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 17px;
+    text-align: center; }
+  .settings-page .deleteuserbutton {
+    margin-top: 10px;
+    width: 100px;
+    background-color: #FF1B4A;
+    border-radius: 35px;
+    height: 30px;
+    border: none;
+    outline: 0;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 17px;
+    cursor: pointer;
+    transition: all .4s ease; }
+  .settings-page .deleteuserbutton:hover {
+    background-color: #FF1D7E; }
+  .settings-page .submit-button {
+    margin: 0 auto;
+    width: 120px; }
+    .settings-page .submit-button button {
+      margin-top: 10px;
+      width: 120px;
+      background-color: #FF1B4A;
+      border-radius: 35px;
+      height: 35px;
+      border: none;
+      outline: 0;
+      color: white;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 17px;
+      cursor: pointer;
+      transition: all .4s ease; }
+    .settings-page .submit-button button:hover {
+      background-color: #FF1D7E; }
+
+@media screen and (min-width: 768px) {
+  .settings-page .form-style-delete {
+    background: white;
+    width: 600px;
+    height: 600px;
+    margin: 180px auto;
+    border-radius: 35px; }
+    .settings-page .form-style-delete table {
+      width: 590px;
+      font-size: 16px; }
+    .settings-page .form-style-delete td {
+      height: 30px; }
+    .settings-page .form-style-delete thead {
+      height: 50px; }
+  .settings-page .form-style-update {
+    background: white;
+    width: 400px;
+    height: 620px;
+    margin: 130px auto;
+    border-radius: 35px; }
+    .settings-page .form-style-update .align-items-center-update {
+      width: 300px;
+      margin: 0 auto; }
+    .settings-page .form-style-update input {
+      width: 300px;
+      background: transparent;
+      -webkit-background: transparent;
+      -webkit-autofill: none;
+      border: 2px solid #FF1B4A;
+      outline: 0;
+      margin-bottom: 20px;
+      height: 30px;
+      border-radius: 10px; }
+    .settings-page .form-style-update input::placeholder {
+      font-family: 'Montserrat', sans-serif;
+      text-align: center;
+      font-size: 17px; }
+    .settings-page .form-style-update textarea {
+      width: 300px;
+      background: transparent;
+      -webkit-background: transparent;
+      -webkit-autofill: none;
+      border: 2px solid #FF1B4A;
+      outline: 0;
+      margin-bottom: 20px;
+      height: 60px;
+      border-radius: 10px; }
+    .settings-page .form-style-update .colortext {
+      padding-top: 2px; }
+    .settings-page .form-style-update textarea::placeholder {
+      padding-top: 5px; }
   .settings-page .style-link {
     text-decoration: none;
     color: #FF1B4A;
@@ -848,7 +1036,7 @@ footer {
     background: #fff;
     width: 400px;
     height: 400px;
-    margin: 240px 0 240px 0;
+    margin: 30px auto 30px auto;
     border-radius: 35px; }
     .settings-page .form-style input {
       width: 220px;
@@ -924,7 +1112,203 @@ footer {
       cursor: pointer;
       transition: all .4s ease; }
     .settings-page .submit-button button:hover {
+      background-color: #FF1D7E; } }
+
+@media screen and (min-width: 1200px) {
+  .settings-page {
+    background: url("../images/bg_login_2.svg") center center no-repeat;
+    background-size: cover;
+    height: 100vh;
+    min-width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly; }
+    .settings-page .routes-flex {
+      display: flex;
+      flex-direction: column;
+      justify-content: center; }
+    .settings-page .form-style-delete {
+      background: white;
+      width: 850px;
+      height: 600px;
+      margin: 180px auto;
+      border-radius: 35px; }
+      .settings-page .form-style-delete table {
+        width: 800px; }
+      .settings-page .form-style-delete td {
+        height: 30px; }
+      .settings-page .form-style-delete thead {
+        height: 50px; }
+    .settings-page .form-style-update {
+      background: white;
+      width: 400px;
+      height: 620px;
+      margin: 130px auto;
+      border-radius: 35px; }
+      .settings-page .form-style-update #con-create-style {
+        border: none; }
+      .settings-page .form-style-update .align-items-center-update {
+        width: 300px;
+        margin: 0 auto; }
+      .settings-page .form-style-update input {
+        width: 300px;
+        background: transparent;
+        -webkit-background: transparent;
+        -webkit-autofill: none;
+        border: 2px solid #FF1B4A;
+        outline: 0;
+        margin-bottom: 20px;
+        height: 30px;
+        border-radius: 10px; }
+      .settings-page .form-style-update input::placeholder {
+        font-family: 'Montserrat', sans-serif;
+        text-align: center;
+        font-size: 17px; }
+      .settings-page .form-style-update textarea {
+        width: 300px;
+        background: transparent;
+        -webkit-background: transparent;
+        -webkit-autofill: none;
+        border: 2px solid #FF1B4A;
+        outline: 0;
+        margin-bottom: 20px;
+        height: 60px;
+        border-radius: 10px; }
+      .settings-page .form-style-update .colortext {
+        padding-top: 2px; }
+      .settings-page .form-style-update textarea::placeholder {
+        padding-top: 5px; }
+    .settings-page .form-style-content-create {
+      background: white;
+      width: 400px;
+      height: 550px;
+      margin: 130px auto;
+      border-radius: 35px; }
+      .settings-page .form-style-content-create form {
+        margin-top: 20px; }
+      .settings-page .form-style-content-create textarea {
+        width: 300px;
+        background: transparent;
+        -webkit-background: transparent;
+        -webkit-autofill: none;
+        border: 2px solid #FF1B4A;
+        outline: 0;
+        margin-bottom: 20px;
+        height: 60px;
+        border-radius: 10px; }
+      .settings-page .form-style-content-create .colortext {
+        padding-top: 2px; }
+      .settings-page .form-style-content-create textarea::placeholder {
+        padding-top: 5px; }
+      .settings-page .form-style-content-create .align-items-center-create {
+        width: 300px;
+        margin: 0 auto; }
+      .settings-page .form-style-content-create input {
+        width: 300px;
+        background: transparent;
+        -webkit-background: transparent;
+        -webkit-autofill: none;
+        border: 2px solid #FF1B4A;
+        outline: 0;
+        margin-bottom: 20px;
+        height: 30px;
+        border-radius: 10px; }
+      .settings-page .form-style-content-create input::placeholder {
+        font-family: 'Montserrat', sans-serif;
+        text-align: center;
+        font-size: 17px; }
+      .settings-page .form-style-content-create #con-create-style {
+        border: none; }
+    .settings-page .style-link {
+      text-decoration: none;
+      color: #FF1B4A;
+      font-family: 'Chango';
+      font-size: 35px;
+      display: inline-block;
+      margin: 50px auto 0 auto; }
+    .settings-page .style-link:hover {
+      color: #b62487; }
+    .settings-page .form-style {
+      background: #fff;
+      width: 400px;
+      height: 400px;
+      margin: 240px 0 240px 0;
+      border-radius: 35px; }
+      .settings-page .form-style input {
+        width: 220px;
+        background: transparent;
+        -webkit-background: transparent;
+        -webkit-autofill: none;
+        border: 2px solid #FF1B4A;
+        outline: 0;
+        margin-bottom: 20px;
+        height: 30px;
+        border-radius: 35px; }
+      .settings-page .form-style input::placeholder {
+        font-family: 'Montserrat', sans-serif;
+        text-align: center;
+        font-size: 17px; }
+    .settings-page h2 {
+      color: #FF1B4A;
+      text-align: center;
+      padding-top: 30px;
+      padding-bottom: 30px; }
+    .settings-page .align-items-center {
+      width: 220px;
+      margin: 0 auto; }
+    .settings-page .not-display {
+      display: none; }
+    .settings-page table {
+      margin-left: 15px;
+      margin-right: 15px;
+      width: 800px;
+      text-align: center; }
+    .settings-page th {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 17px;
+      text-align: center;
+      padding-bottom: 15px; }
+    .settings-page td {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 15px;
+      max-width: 300px; }
+    .settings-page .colortext {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 17px;
+      text-align: center; }
+    .settings-page .deleteuserbutton {
+      margin-top: 10px;
+      width: 100px;
+      background-color: #FF1B4A;
+      border-radius: 35px;
+      height: 30px;
+      border: none;
+      outline: 0;
+      color: white;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 17px;
+      cursor: pointer;
+      transition: all .4s ease; }
+    .settings-page .deleteuserbutton:hover {
       background-color: #FF1D7E; }
+    .settings-page .submit-button {
+      margin: 0 auto;
+      width: 120px; }
+      .settings-page .submit-button button {
+        margin-top: 10px;
+        width: 120px;
+        background-color: #FF1B4A;
+        border-radius: 35px;
+        height: 35px;
+        border: none;
+        outline: 0;
+        color: white;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 17px;
+        cursor: pointer;
+        transition: all .4s ease; }
+      .settings-page .submit-button button:hover {
+        background-color: #FF1D7E; } }
 
 .popup {
   width: 100%;

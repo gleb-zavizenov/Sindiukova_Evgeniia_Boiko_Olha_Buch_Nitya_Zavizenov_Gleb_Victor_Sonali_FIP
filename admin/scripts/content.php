@@ -43,7 +43,7 @@ function addContent() {
         ':hashtag' => $_POST['section_hashtag'],
         ':color' => $_POST['section_color'],
         ':image'=>$image
-)
+    )
 
    
        
@@ -70,7 +70,10 @@ function addContent() {
 
 
 function deleteContent($id) {
+   
+    try{
     $pdo = Database::getInstance()->getConnection();
+
 
     $delete_user = 'DELETE FROM tbl_main_sections WHERE id = :id';
     $delete_set = $pdo->prepare($delete_user);
@@ -101,11 +104,31 @@ function deleteContent($id) {
         return json_encode($content);
     }
 
+    }catch(Exception $e){
+
+    $error = $e->getMessage();
+    return $error;
+
+}
+
 }
 
 function editContent(){
 
+    try{
+
     $pdo = Database::getInstance()->getConnection();
+
+    $image = $_FILES['img']['name'];
+    $image_types = array('gif', 'jpg', 'jpeg', 'png', 'webp');
+    if(!in_array(pathinfo($_FILES['img']['name'])['extension'], $image_types)){
+        throw new Exception('Wrong image type! Choose gif, jpg, jpeg, png or webp');
+    }
+    $file_path = '../images/';
+    $path = $file_path . $image;
+    if(!move_uploaded_file($_FILES['img']['tmp_name'], $path)){
+        throw new Exception('Failed');
+    }
 
     $create_user_query = 'UPDATE tbl_main_sections SET section_header = :header, section_text = :text, section_hashtag = :hashtag, section_color = :color, img = :image, popup = :popup WHERE id = :id';
 
@@ -119,7 +142,7 @@ function editContent(){
         ':text' => $_POST['section_text'],
         ':hashtag' => $_POST['section_hashtag'],
         ':color' => $_POST['section_color'],
-        ':image' => $_POST['img'],
+        ':image' => $image,
         ':popup' => $_POST['popup']
 
 
@@ -134,6 +157,12 @@ function editContent(){
     } else {
         
         return array('result' => false);
+
+    }}catch(Exception $e){
+
+        $error = $e->getMessage();
+        return $error;
+    
     }
 
 
