@@ -11,15 +11,11 @@
        
     }
 
-    // if(isset($_GET['delete_user'])){
-    //     $users = $_GET['user_id'];
-    //     $result = deleteUser($users);
-        
-
-        
-    // }
-
-    // echo json_encode($result);
+    if(isset($_GET['delete_user'])){
+        $users = $_GET['user_id'];
+        $result = deleteUser($users);
+    
+    }
 
    
 

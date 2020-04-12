@@ -4,11 +4,11 @@ class Database
     // Note: specify your own database credentials
     private $host = "localhost";
 
-    private $db_name = "db_hiv_campaign_fip";
+    private $db_name = "fip_campaign_hiv";
 
     private $username = "root";
 
-    private $password = "";
+    private $password = "root";
 
     private static $instance = null;
     public $conn;
