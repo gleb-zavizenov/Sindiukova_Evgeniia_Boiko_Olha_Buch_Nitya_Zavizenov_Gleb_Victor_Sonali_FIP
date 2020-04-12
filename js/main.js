@@ -1,6 +1,12 @@
 import SectionsComponent from "./components/SectionsComponent.js";
 import LoginComponent from "./components/LoginComponent.js";
 import SettingsComponent from "./components/SettingsComponent.js";
+import UpdateUserComponent  from "./components/UpdateUserComponent.js";
+import CreateUserComponent from "./components/CreateUserComponent.js";
+import DeleteUserComponent from "./components/DeleteUserComponent.js";
+import CreateContentComponent from "./components/CreateContentComponent.js";
+import DeleteContentComponent from "./components/DeleteContentComponent.js";
+import UpdateContentComponent from "./components/UpdateContentComponent.js";
 
 
 
@@ -10,7 +16,16 @@ const router = new VueRouter({
     {path: "/", name: "home", component: SectionsComponent, meta: {
       mainpageheader: true, mainpagefooter: true}},
     {path: '/login', name: "login", component: LoginComponent},
-    {path: '/admin', name: "admin", component: SettingsComponent, meta: { requiresAuth: true }}
+    {path: '/admin', name: "admin", component: SettingsComponent, meta: { requiresAuth: true }},
+    {path: '/updateuser', name: "update_user", component: UpdateUserComponent },
+    {path: '/createuser', name: "create_user", component: CreateUserComponent },
+    {path: '/deleteuser', name: "delete_user", component: DeleteUserComponent },
+    {path: '/createcontent', name: "create_content", component: CreateContentComponent },
+    {path: '/deletecontent', name: "delete_content", component: DeleteContentComponent },
+    {path: '/updatecontent', name: "update_content", component: UpdateContentComponent }
+
+
+
 
   ]
 })
@@ -51,21 +66,6 @@ var vm = new Vue({
   },
 
   methods: {
-    getContentData() {
-      const url = './includes/index.php?getContent=1';
-      // let url = `./admin/admin_content.php?getContent=1`;
-
-      fetch(url) // get data from the DB 
-      .then(res => res.json()) // translate JSON from DB to plain object
-      .then(data => { //use the plain data object (the user)
-        console.log(data);
-        
-        // log it to the console (testing)
-        this.content.settings = data[0];
-      })
-      .catch((error) => console.error(error))
-
-    },
 
     setAuthenticated(status, data) {
       this.authenticated = status;

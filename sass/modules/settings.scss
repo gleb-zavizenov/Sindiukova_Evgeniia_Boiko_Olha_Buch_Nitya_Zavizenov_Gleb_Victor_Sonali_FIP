@@ -5,23 +5,148 @@
     min-width: 100%;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-evenly;
+
+    .routes-flex {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
 
     .form-style-delete {
         background: white;
-        width: 500px;
-        height: 400px;
+        width: 850px;
+        height: 600px;
         margin: 180px auto;
         border-radius: 35px;
+
+        td {
+            height: 30px;
+        }
+
+        thead {
+            height: 50px;
+        }
+
+        
 
     }
 
-    .form-style {
+    .form-style-update {
         background: white;
-        width: 350px;
-        height: 400px;
-        margin: 180px auto;
+        width: 400px;
+        height: 600px;
+        margin: 130px auto;
         border-radius: 35px;
+        
+    }
+
+    .form-style-content-create {
+
+        form{
+            margin-top: 20px;
+        }
+        background: white;
+        width: 400px;
+        height: 550px;
+        margin: 130px auto;
+        border-radius: 35px;
+
+        textarea {
+
+        width: 300px;
+        background: transparent;
+        -webkit-background:  transparent;
+        -webkit-autofill: none;
+        border: 2px solid $red;
+        outline: 0;
+        margin-bottom: 20px;
+        height: 60px;
+        border-radius: 5px;
+
+        }
+
+        .colortext {
+            padding-top: 2px;
+        }
+
+        textarea::placeholder {
+            padding-top: 5px;
+        }
+
+        .align-items-center-create {
+            width: 300px;
+            margin: 0 auto;
+        }
+
+        input{
+
+            width: 300px;
+            background: transparent;
+            -webkit-background:  transparent;
+            -webkit-autofill: none;
+            border: 2px solid $red;
+            outline: 0;
+            margin-bottom: 20px;
+            height: 30px;
+            border-radius: 5px;
+        }
+    
+        input::placeholder {
+            font-family: 'Montserrat', sans-serif;
+            text-align: center;
+            font-size: 17px;
+            
+        }
+
+        #con-create-style {
+            
+            border: none;
+            
+        }
+
+       
+
+    }
+
+    .style-link {
+        text-decoration: none;
+        color: $red;
+        font-family: 'Chango';
+        font-size: 35px;
+        display: inline-block;
+        margin: 50px auto 0 auto;
+    }
+
+    .style-link:hover {
+        color: #b62487;
+    }
+
+    .form-style {
+        background: #fff;
+        width: 400px;
+        height: 400px;
+        margin: 240px 0 240px 0;
+        border-radius: 35px;
+
+        input{
+            width: 220px;
+            background: transparent;
+            -webkit-background:  transparent;
+            -webkit-autofill: none;
+            border: 2px solid $red;
+            outline: 0;
+            margin-bottom: 20px;
+            height: 30px;
+            border-radius: 35px;
+        }
+    
+        input::placeholder {
+            font-family: 'Montserrat', sans-serif;
+            text-align: center;
+            font-size: 17px;
+            
+        }
     }
 
     h2 {
@@ -40,29 +165,12 @@
         display: none;
     }
 
-    input{
-        width: 220px;
-        background: transparent;
-        -webkit-background:  transparent;
-        -webkit-autofill: none;
-        border: 2px solid $red;
-        outline: 0;
-        margin-bottom: 20px;
-        height: 30px;
-        border-radius: 35px;
-    }
-
-    input::placeholder {
-        font-family: 'Montserrat', sans-serif;
-        text-align: center;
-        font-size: 17px;
-        
-    }
+   
 
     table {
         margin-left: 15px;
         margin-right: 15px;
-        width: 470px;
+        width: 800px;
         text-align: center;
 
     }
@@ -78,6 +186,9 @@
 
     td {
         font-family: 'Montserrat', sans-serif;
+        font-size: 15px;
+        max-width: 300px;
+        
     }
 
     .colortext{
@@ -109,7 +220,7 @@
 
     }
 
-    .submit-button{
+.submit-button{
         margin: 0 auto;
         width:120px;
 
@@ -137,6 +248,8 @@
         }
 
 
-    }
+}
+
+
 
 }

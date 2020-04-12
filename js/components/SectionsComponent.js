@@ -33,6 +33,9 @@ export default {
                 <h2>Are you ready to meet my friends?</h2>
             </div>
         </section>
+        </div>
+        <section class="heroes-main-content">
+        <div class="main-content-section" v-for="content in contentList">
         <section class="character-section" id="pink" v-if="content.id === '3'">
             <div class="container character-container">
                 <div class="character-container-content">
@@ -92,8 +95,9 @@ export default {
                 <img class="character-container-img character-container-img-tablet other-hero" :src="'images/'+ content.img" alt="character">
                 <img class="character-container-img character-container-img-mobile" :src="'images/mobile-'+ content.img" alt="blue">
             </div>
-        </section> 
+        </section>
         </div> 
+        </section>
         <section class="container all-heroes">
             <img src="./images/all_heroes.svg">
         </section>
@@ -108,14 +112,13 @@ export default {
     },
 
     created: function() {
-        // this will fire when the component gets build
+
         this.fetchAllContent();
     },
 
     methods: {
         fetchAllContent() {
-            // let url = `./admin/admin_content.php?getContent=true`;
-            let url = `./includes/index.php?getContent=true`;
+            let url = `./admin/index.php?content=main_sections`;
             fetch(url)
             .then(res => res.json())
             .then(data => {
@@ -123,6 +126,7 @@ export default {
             })
             .catch((err) => {console.error(err)})
         },
+
         showPopup(background){
             let imageUrl = `url('./images/${background}')`;
             document.querySelector(".popup-box").style.backgroundImage = imageUrl;

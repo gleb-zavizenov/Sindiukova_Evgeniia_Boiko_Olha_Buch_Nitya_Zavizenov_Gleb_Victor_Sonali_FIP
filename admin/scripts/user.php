@@ -1,45 +1,68 @@
 <?php 
     
-    function createUser($fname, $username, $password, $email) {
+
+function addUser() {
+
     $pdo = Database::getInstance()->getConnection();
-    
+
     $create_user_query = "INSERT INTO tbl_user (user_fname, user_name, user_pass, user_email, user_ip) VALUES (:fname, :username, :pass, :email, 'no')";
-    $sql_set = $pdo->prepare($create_user_query);
-    $user_result = $sql_set->execute(
-            array(
-            ':fname'=>$fname,
-            ':username'=>$username,
-            ':email'=>$email,
-            ':pass'=>$password
-            )
-        );
 
+    $sql_set = $pdo->prepare($create_user_query);
+
+    $resultUser = $sql_set->execute(
+        array(
+
+        ':fname' => $_POST['user_fname'],
+        ':username' => $_POST['user_name'],
+        ':pass' => $_POST['user_pass'],
+        ':email' => $_POST['user_email']
+
+        )
+           
+    );
  
+    if ($resultUser) {
+       
+        return array('result' => $resultUser);
+    } else {
         
+        return array('result' => false);
+    }
 
 }
 
-function editUser($id, $fname, $username, $password, $email){
+function editUser(){
 
     $pdo = Database::getInstance()->getConnection();
-    
-    $update_query = "UPDATE tbl_user SET user_fname = :fname, user_name = :username, user_pass = :password, user_email = :email WHERE user_id = :id";
-        $update_set = $pdo->prepare($update_query);
-        $results = $update_set->execute(
-            array(
 
-                ':id'=>$id,
-                'fname'=>$fname,
-                ':username'=>$username,
-                ':password'=>$password,
-                ':email'=>$email
-            
+    $create_user_query = 'UPDATE tbl_user SET user_name = :username, user_pass = :pass, user_email = :email WHERE user_fname = :fname';
 
-            )
+    $sql_set = $pdo->prepare($create_user_query);
 
-        );
+    $resultUser = $sql_set->execute(
+        array(
+
+        ':fname' => $_POST['user_fname'],
+        ':username' => $_POST['user_name'],
+        ':pass' => $_POST['user_pass'],
+        ':email' => $_POST['user_email']
+
+        )
+           
+    );
+ 
+    if ($resultUser) {
+       
+        return array('result' => $resultUser);
+    } else {
+        
+        return array('result' => false);
+    }
+
 
 }
+
+
 
 function getAllUsers(){
     $pdo = Database::getInstance()->getConnection();

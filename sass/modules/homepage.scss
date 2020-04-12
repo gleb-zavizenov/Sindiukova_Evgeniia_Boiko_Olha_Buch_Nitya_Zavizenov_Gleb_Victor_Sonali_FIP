@@ -366,6 +366,16 @@
 // Styles for desktop version
 // 
 @media screen and (min-width:1200px){
+    .heroes-main-content {
+        background: url('../images/bg_main_3.svg') no-repeat center;
+        background-size: cover;
+        
+        min-width: 100%;
+        min-height: 100%;
+        // height: 3500px;
+
+    }
+
     .hero-container{
         width:1200px;
     }
@@ -379,7 +389,8 @@
     }
 
     .main-content-section:last-child{
-        margin-bottom: 0px;
+        margin-bottom: 100px;
+
     }
 
     .character-container-content{
@@ -387,11 +398,13 @@
     }
 
     .character-container-img-tablet {
-        height: 500px;
+        height: 600px;
+
+        
     }
 
     .character-section{
-        height: 660px;
+        height: 850px;
         background-position: center center;
         background-repeat: no-repeat;
         background-size: cover;
@@ -402,7 +415,8 @@
     }
 
     #pink{
-        background-image: url('../images/bg_pink2.svg');
+        // background-image: url('../images/pink_flat.svg');
+        background-image: none;
 
         .character-button:hover{
             background-color: $pink;
@@ -414,8 +428,10 @@
     }
 
     #green{
-        background-image: url('../images/bg_green2.svg');
-        background-size: cover;
+        // background-image: url('../images/bg_green2.svg');
+        // background-size: cover;
+        background-image: url('../images/green_flat.svg');
+        background-image: none;
 
         .character-button:hover{
             background-color: $green;
@@ -427,8 +443,10 @@
     }
 
     #orange{
-        background-image: url('../images/bg_orange2.svg');
-        background-size: cover;
+        // background-image: url('../images/bg_orange2.svg');
+        // background-size: cover;
+        // background-image: url('../images/orange_flat.svg');
+        background-image: none;
 
         .character-button:hover{
             background-color: $orange;
@@ -440,8 +458,9 @@
     }
 
     #blue{
-        background-image: url('../images/bg_blue2.svg');
-        background-size: cover;
+        // background-image: url('../images/bg_blue2.svg');
+        // background-size: cover;
+        background-image: none;
 
         .character-button:hover{
             background-color: $blue;
@@ -454,9 +473,9 @@
 
     .all-heroes{
         img{
-            width:40%;
+            width:55%;
         }
-        margin-top:40px;
+        margin-top:-50px;
         margin-bottom: 70px;
     }
 }

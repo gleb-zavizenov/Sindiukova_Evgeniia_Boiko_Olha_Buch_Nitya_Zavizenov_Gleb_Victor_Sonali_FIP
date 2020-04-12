@@ -43,14 +43,13 @@ export default {
         login() {
 
             if (this.input.username != "" && this.input.password != "") {
-                // fetch the user from the DB
-                // generate the form data
+            
                 let formData = new FormData();
 
                 formData.append("username", this.input.username);
                 formData.append("password", this.input.password);
 
-                let url = `./includes/index.php?user=1`;
+                let url = `./admin/admin_login.php`;
 
                 fetch(url, {
                     method: 'POST',
@@ -58,9 +57,9 @@ export default {
                 })
                     .then(res => res.json())
                     .then(data => {
-                        if (typeof data != "object") { // means that we're not getting a user object back
+                        if (typeof data != "object") { 
                             console.warn(data);
-                            // just for testing
+                           
                             alert("authentication failed, please try again");
                         } else {
                             this.$emit("authenticated", true, data);
