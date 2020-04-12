@@ -22,11 +22,11 @@ export default {
                         </div>
                         <div class="header-right">
                             <div class="header-right-list">
-                                <img v-if="authenticated" v-on:click="logout()" src="images/in_out.svg" alt="logout">
-                                <router-link to="/admin" v-if="!authenticated">
+                            
+                                <router-link to="/admin">
                                     <img src="images/login1.svg" alt="profile">
                                 </router-link>
-                                <img v-if="authenticated" class="settings-icon" src="images/settings1.svg" v-on:click="settings()" v-if="administrator" alt="settings">
+        
                             </div>
                             <img src="images/purple-round.svg" alt="" class="header-right-img">
                         </div>
