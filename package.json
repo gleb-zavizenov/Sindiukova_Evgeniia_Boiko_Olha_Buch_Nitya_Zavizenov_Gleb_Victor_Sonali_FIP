@@ -18,6 +18,6 @@
   },
   "homepage": "https://github.com/gleb-zavizenov/Sindiukova_Evgeniia_Boiko_Olha_Buch_Nitya_Zavizenov_Gleb_Victor_Sonali_FIP#readme",
   "dependencies": {
-    "node-sass": "^4.13.1"
+    "node-sass": "^7.0.0"
   }
 }
